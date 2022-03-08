@@ -1,12 +1,12 @@
 module.exports = {
   mode: "jit",
-  purge: [
-    "./src/pages/**/*.{js,ts,jsx,tsx}",
-    "./src/components/**/*.{js,ts,jsx,tsx}",
-  ],
-  content: [],
+  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+  darkMode: "class", // or 'media' or 'class'
   theme: {
-    extends: ["stylelint-config-recommended"],
+    extend: {},
+  },
+  variants: {
+    extend: {},
   },
   plugins: [],
 };
