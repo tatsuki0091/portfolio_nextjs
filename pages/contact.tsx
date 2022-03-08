@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { CpIptxt } from "../styles/formStyle";
+import { CpIptxt } from "../styles/contactStyle";
+import { SEND_EMAIL } from "../types/Types";
 
 const Contact = () => {
   const [subject, setSubject] = useState("");
@@ -8,17 +9,18 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const sendEmail = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log(process.env.NEXT_PUBLIC_SEND_EMAIL);
-    const res = await axios.post(
-      process.env.REACT_APP_SEND_EMAIL_PRODUCTION,
-      values,
-      {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
-    // return res.data;
+    const emailEndpoint = process.env.NEXT_PUBLIC_SEND_EMAIL || "";
+    const mailInfo: SEND_EMAIL = {
+      subject,
+      emailAddress,
+      message,
+    };
+    const res = await axios.post(emailEndpoint, mailInfo, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    return res.data;
   };
 
   return (
@@ -28,12 +30,14 @@ const Contact = () => {
           <div className="lg:space-x-5 lg:flex lg:flex-row item-center lg:-mx-4 flex flex-col-reverse">
             <form className="w-full" onSubmit={(e) => sendEmail(e)}>
               <CpIptxt>
-                <input
-                  placeholder="Subject"
-                  type="text"
-                  value={subject}
-                  onChange={(event) => setSubject(event.target.value)}
-                />
+                <div>
+                  <input
+                    placeholder="Subject"
+                    type="text"
+                    value={subject}
+                    onChange={(event) => setSubject(event.target.value)}
+                  />
+                </div>
               </CpIptxt>
               <CpIptxt>
                 <input

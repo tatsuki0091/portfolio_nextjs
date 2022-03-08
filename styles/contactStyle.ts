@@ -11,6 +11,16 @@ export const CpIptxt = styled.div`
     padding: 0.3em;
     letter-spacing: 1px;
     border: 0;
+    &::after {
+      display: block;
+      width: 100%;
+      height: 4px;
+      margin-top: -1px;
+      content: "";
+      border-width: 0 1px 1px 1px;
+      border-style: solid;
+      border-color: #da3c41;
+    }
   }
   input[type="submit"] {
     font: 15px/24px sans-serif;
@@ -20,6 +30,19 @@ export const CpIptxt = styled.div`
     padding: 0.3em;
     letter-spacing: 1px;
     border: 0;
+    &::after {
+      display: block;
+      width: 100%;
+      height: 4px;
+      margin-top: -1px;
+      content: "";
+      border-width: 0 1px 1px 1px;
+      border-style: solid;
+      border-color: #da3c41;
+    }
+    &:hover {
+      background-color: #b3424a;
+    }
   }
   textarea {
     font: 15px/24px sans-serif;
@@ -29,5 +52,15 @@ export const CpIptxt = styled.div`
     padding: 0.3em;
     letter-spacing: 1px;
     border: 0;
+    &::after {
+      display: block;
+      width: 100%;
+      height: 4px;
+      margin-top: -1px;
+      content: "";
+      border-width: 0 1px 1px 1px;
+      border-style: solid;
+      border-color: #da3c41;
+    }
   }
 `;

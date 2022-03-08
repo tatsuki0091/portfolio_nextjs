@@ -40,14 +40,6 @@ const Footer = () => {
             >
               DEV
             </a>
-            <a
-              href="#"
-              className={"transition-colors hover:text-yellow-500"}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Hashnode
-            </a>
           </div>
         </div>
       </div>
