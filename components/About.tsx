@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import profile from "../public/img/profile.jpg";
+import { Button } from "../styles/aboutStyle";
+import Link from "next/link";
 
 const About = () => {
   return (
@@ -30,6 +32,16 @@ const About = () => {
           </div>
         </div>
       </div>
+      <Link href="../pdf/resume.pdf">
+        <a
+          target="_blank"
+          className={
+            "font-medium tracking-wider transition-colors text-gray-900 hover:text-white dark:text-white"
+          }
+        >
+          <Button>Resume</Button>
+        </a>
+      </Link>
     </div>
   );
 };
