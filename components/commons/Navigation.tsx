@@ -26,7 +26,7 @@ const Navigation = () => {
                     "font-medium tracking-wider transition-colors text-gray-900 hover:text-red-600 uppercase dark:text-white"
                   }
                 >
-                  My Carrer
+                  My Career
                 </a>
               </Link>
             </li>
