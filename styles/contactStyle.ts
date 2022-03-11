@@ -40,9 +40,9 @@ export const CpIptxt = styled.div`
       border-style: solid;
       border-color: #da3c41;
     }
-    &:hover {
+    /* &:hover {
       background-color: #b3424a;
-    }
+    } */
   }
   textarea {
     font: 15px/24px sans-serif;

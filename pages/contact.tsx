@@ -55,7 +55,11 @@ const Contact = () => {
                 />
               </CpIptxt>
               <CpIptxt>
-                <input type="submit" value="SEND" />
+                <input
+                  className="hover:bg-red-600 hover:text-white dark:hover:bg-blue-600"
+                  type="submit"
+                  value="SEND"
+                />
               </CpIptxt>
             </form>
           </div>
