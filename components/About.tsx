@@ -28,6 +28,7 @@ const About = () => {
               I'm Tatsuki who has 4 years experiences as a Fullstack Developer
               specialized in both front-end and back-end web development.
             </p>
+            <p>I can help you with all the sides of your project:</p>
             <p> I'm currently live in Vancouver.</p>
           </div>
         </div>
@@ -36,10 +37,12 @@ const About = () => {
         <a
           target="_blank"
           className={
-            "font-medium tracking-wider transition-colors text-gray-900 hover:text-white dark:text-white"
+            "font-medium tracking-wider transition-colors text-gray-900 hover:text-white  dark:text-white"
           }
         >
-          <Button>Resume</Button>
+          <Button className="hover:bg-red-600 dark:hover:bg-blue-800">
+            Resume
+          </Button>
         </a>
       </Link>
     </div>

@@ -12,7 +12,7 @@ const Navigation = () => {
               <Link href="/">
                 <a
                   className={
-                    "font-medium tracking-wider transition-colors text-gray-900 hover:text-sky-500 uppercase dark:text-white"
+                    "font-medium tracking-wider transition-colors text-gray-900 hover:text-red-600 uppercase dark:text-white"
                   }
                 >
                   Tatsuki Yamatani
@@ -20,10 +20,10 @@ const Navigation = () => {
               </Link>
             </li>
             <li className="mr-6">
-              <Link href="/">
+              <Link href="/career">
                 <a
                   className={
-                    "font-medium tracking-wider transition-colors text-gray-900 hover:text-sky-500 uppercase dark:text-white"
+                    "font-medium tracking-wider transition-colors text-gray-900 hover:text-red-600 uppercase dark:text-white"
                   }
                 >
                   My Carrer
@@ -31,10 +31,10 @@ const Navigation = () => {
               </Link>
             </li>
             <li className="mr-6">
-              <Link href="/">
+              <Link href="/work">
                 <a
                   className={
-                    "font-medium tracking-wider transition-colors text-gray-900 hover:text-sky-500 uppercase dark:text-white"
+                    "font-medium tracking-wider transition-colors text-gray-900 hover:text-red-600 uppercase dark:text-white"
                   }
                 >
                   Work
@@ -45,7 +45,7 @@ const Navigation = () => {
               <Link href="/contact">
                 <a
                   className={
-                    "font-medium tracking-wider transition-colors text-gray-900 hover:text-sky-500 uppercase dark:text-white"
+                    "font-medium tracking-wider transition-colors text-gray-900 hover:text-red-600 uppercase dark:text-white"
                   }
                 >
                   Contact

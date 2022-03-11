@@ -15,7 +15,4 @@ export const Button = styled.button`
     margin-top: -1px;
     content: "";
   }
-  &:hover {
-    background-color: #b3424a;
-  }
 `;
