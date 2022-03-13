@@ -16,7 +16,7 @@ const Footer = () => {
               rel="noreferrer"
             >
               <svg
-                className="w-6 h-6 fill-gray-600 hover:fill-red-600 dark:fill-white dark:hover:fill-blue-800"
+                className="w-6 h-6 fill-gray-600 hover:fill-red-600 dark:fill-white dark:hover:fill-blue-600"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
               >
@@ -30,7 +30,7 @@ const Footer = () => {
               rel="noreferrer"
             >
               <svg
-                className="w-6 h-6 fill-gray-600 hover:fill-red-600 dark:fill-white dark:hover:fill-blue-800"
+                className="w-6 h-6 fill-gray-600 hover:fill-red-600 dark:fill-white dark:hover:fill-blue-600"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 448 512"
               >
@@ -41,7 +41,7 @@ const Footer = () => {
             <a
               href="https://github.com/tatsuki0091"
               className={
-                "transition-colors  fill-gray-600 hover:fill-red-600 dark:fill-white dark:hover:fill-blue-800"
+                "transition-colors  fill-gray-600 hover:fill-red-600 dark:fill-white dark:hover:fill-blue-600"
               }
               target="_blank"
               rel="noreferrer"
