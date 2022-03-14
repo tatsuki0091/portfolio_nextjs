@@ -1713,6 +1713,11 @@ miniraf@1.0.0:
   resolved "https://registry.yarnpkg.com/miniraf/-/miniraf-1.0.0.tgz#5d88e108bbdcb55b4a2ff3da337f24a13a3377e1"
   integrity sha512-XpvhtJYzVrpXe+JoAthrT9E40NIrSDDMcdHEYL2M+lR/OCas0nadetcBBq/MWYqlgV5aDWVQ3mfAqd+fG6Y/EQ==
 
+module-name@^0.0.1-security:
+  version "0.0.1-security"
+  resolved "https://registry.yarnpkg.com/module-name/-/module-name-0.0.1-security.tgz#69e165948f0420f9d388df6c8dc59d47250b45ff"
+  integrity sha1-aeFllI8EIPnTiN9sjcWdRyULRf8=
+
 ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
