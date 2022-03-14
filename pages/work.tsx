@@ -33,8 +33,8 @@ const work = () => {
                   mobile application.
                 </p>
                 <p className="mb-3 text-lg font-normal  dark:text-text-white">
-                  I'm currently creating dashboard application for registered
-                  users.
+                  I&apos;m currently creating dashboard application for
+                  registered users.
                 </p>
                 <p className="mb-3 text-lg font-normal  dark:text-white">
                   I developed the frontend and backend. I implemented the
@@ -42,14 +42,14 @@ const work = () => {
                   AWS Amplify.
                 </p>
                 <p className="mb-3 text-lg font-normal  dark:text-white">
-                  I'm managing banch of AWS service for backend. AWS Amplify,
-                  S3, VPC, EC2, IAM, AWS AppSync, Lambda, Amazon DynamoDB,
-                  GraphQL, etc, and backend programming languages are Python and
-                  Javascript.I'm creating every stuff.
+                  I&apos;m managing banch of AWS service for backend. AWS
+                  Amplify, S3, VPC, EC2, IAM, AWS AppSync, Lambda, Amazon
+                  DynamoDB, GraphQL, etc, and backend programming languages are
+                  Python and Javascript.I&apos;m creating every stuff.
                 </p>
                 <p className="mb-3 text-lg font-normal  dark:text-white">
-                  I'm feeling it's good opportunity to learn AWS things, and
-                  it's fun.
+                  I&apos;m feeling it&apos;s good opportunity to learn AWS
+                  things, and it&apos;s fun.
                 </p>
                 {/* <a
                 href="#"
@@ -103,10 +103,10 @@ const work = () => {
                   experience here is being utilized in my current work.
                 </p>
                 <p className="mb-3 text-lg font-normal  dark:text-white">
-                  I'm afraid I'm not available to post more details about this
-                  here due to a Nondisclosure Agreement, but if I have the
-                  opportunity to chat with you, I can give you more details
-                  there.
+                  I&apos;m afraid I&apos;m not available to post more details
+                  about this here due to a Nondisclosure Agreement, but if I
+                  have the opportunity to chat with you, I can give you more
+                  details there.
                 </p>
                 {/* <a
                 href="#"
@@ -166,10 +166,10 @@ const work = () => {
                   the backend with Java, Sprint Boot, PostgreSQL.
                 </p>
                 <p className="mb-3 text-lg font-normal  dark:text-white">
-                  I'm afraid I'm not available to post more details about this
-                  here due to a Nondisclosure Agreement, but if I have the
-                  opportunity to chat with you, I can give you more details
-                  there.
+                  I&apos;m afraid I&apos;m not available to post more details
+                  about this here due to a Nondisclosure Agreement, but if I
+                  have the opportunity to chat with you, I can give you more
+                  details there.
                 </p>
                 {/* <a
                 href="#"
@@ -226,10 +226,10 @@ const work = () => {
                   into the system
                 </p>
                 <p className="mb-3 text-lg font-normal  dark:text-white">
-                  I'm afraid I'm not available to post more details about this
-                  here due to a Nondisclosure Agreement, but if I have the
-                  opportunity to chat with you, I can give you more details
-                  there.
+                  I&apos;m afraid I&apos;m not available to post more details
+                  about this here due to a Nondisclosure Agreement, but if I
+                  have the opportunity to chat with you, I can give you more
+                  details there.
                 </p>
                 {/* <a
                 href="#"
