@@ -24,7 +24,7 @@ const Footer = () => {
               </svg>
             </a>
             <a
-              href="https://www.linkedin.com/in/tatsuki-yamatani-723576181/"
+              href="https://www.linkedin.com/in/tatsuki-yamatani/"
               className={"transition-colors"}
               target="_blank"
               rel="noreferrer"
