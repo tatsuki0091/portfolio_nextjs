@@ -88,7 +88,7 @@ const Navigation = () => {
                   <li className="p-2 border-b-2">
                     <button
                       onClick={menuFunction}
-                      className="hover:text-red-600  w-full container  items-center uppercase dark:text-white"
+                      className="hover:text-red-600 font-medium tracking-wider  w-full container  items-center uppercase dark:text-white"
                     >
                       Close
                     </button>
