@@ -20,7 +20,7 @@ const Navigation = () => {
               <Link href="/">
                 <a
                   className={
-                    "font-medium tracking-wider transition-colors text-gray-900 hover:text-red-600 uppercase dark:text-white dark:hover:text-blue-600"
+                    "font-medium tracking-wider transition-colors hover:text-red-600 uppercase dark:text-white dark:hover:text-blue-600"
                   }
                 >
                   Top
@@ -31,7 +31,7 @@ const Navigation = () => {
               <Link href="/career">
                 <a
                   className={
-                    "font-medium tracking-wider transition-colors text-gray-900 hover:text-red-600 uppercase dark:text-white dark:hover:text-blue-600"
+                    "font-medium tracking-wider transition-colors hover:text-red-600 uppercase dark:text-white dark:hover:text-blue-600"
                   }
                 >
                   Career
@@ -42,7 +42,7 @@ const Navigation = () => {
               <Link href="/work">
                 <a
                   className={
-                    "font-medium tracking-wider transition-colors text-gray-900 hover:text-red-600 uppercase dark:text-white dark:hover:text-blue-600"
+                    "font-medium tracking-wider transition-colors hover:text-red-600 uppercase dark:text-white dark:hover:text-blue-600"
                   }
                 >
                   Work
@@ -53,7 +53,7 @@ const Navigation = () => {
               <Link href="/contact">
                 <a
                   className={
-                    "font-medium tracking-wider transition-colors text-gray-900 hover:text-red-600 uppercase dark:text-white dark:hover:text-blue-600"
+                    "font-medium tracking-wider transition-colors  hover:text-red-600 uppercase dark:text-white dark:hover:text-blue-600"
                   }
                 >
                   Contact
@@ -65,7 +65,7 @@ const Navigation = () => {
                 <a
                   target="_blank"
                   className={
-                    "font-medium tracking-wider transition-colors text-gray-900 hover:text-red-600 uppercase dark:text-white dark:hover:text-blue-600"
+                    "font-medium tracking-wider transition-colors hover:text-red-600 uppercase dark:text-white dark:hover:text-blue-600"
                   }
                 >
                   Resume
@@ -76,7 +76,7 @@ const Navigation = () => {
 
           <button
             onClick={menuFunction}
-            className="flex-initial  ml-1 mr-1 px-4 absolute top-0 left-0 md:hidden"
+            className="flex-initial  ml-1 mr-1 px-5 absolute top-0 left-0 md:hidden"
           >
             <Image src={Humburger} alt="menu" width={50} height={50} />
           </button>
@@ -86,18 +86,21 @@ const Navigation = () => {
               <div className="basis-1/2 bg-white">
                 <ul className=" text-center border-l-2 ">
                   <li className="p-2 border-b-2">
-                    <button onClick={menuFunction} className="font-bold">
-                      close
+                    <button
+                      onClick={menuFunction}
+                      className="hover:text-red-600  w-full container  items-center uppercase dark:text-white"
+                    >
+                      Close
                     </button>
                   </li>
                   <li className="p-2 border-b-2">
                     <Link href="/">
                       <a
                         className={
-                          "font-medium tracking-wider transition-colors text-gray-900 hover:text-red-600 uppercase dark:text-white dark:hover:text-blue-600"
+                          "font-medium tracking-wider block transition-colors  hover:text-red-600 uppercase dark:text-white dark:hover:text-blue-600"
                         }
                       >
-                        Tatsuki Yamatani
+                        TOP
                       </a>
                     </Link>
                   </li>
@@ -105,7 +108,7 @@ const Navigation = () => {
                     <Link href="/career">
                       <a
                         className={
-                          "font-medium tracking-wider transition-colors text-gray-900 hover:text-red-600 uppercase dark:text-white dark:hover:text-blue-600"
+                          "font-medium tracking-wider block transition-colors hover:text-red-600 uppercase dark:text-white dark:hover:text-blue-600"
                         }
                       >
                         My Career
@@ -116,7 +119,7 @@ const Navigation = () => {
                     <Link href="/work">
                       <a
                         className={
-                          "font-medium tracking-wider transition-colors text-gray-900 hover:text-red-600 uppercase dark:text-white dark:hover:text-blue-600"
+                          "font-medium tracking-wider block transition-colors hover:text-red-600 uppercase dark:text-white dark:hover:text-blue-600"
                         }
                       >
                         Work
@@ -128,7 +131,7 @@ const Navigation = () => {
                       <a
                         target="_blank"
                         className={
-                          "font-medium tracking-wider transition-colors text-gray-900 hover:text-red-600 uppercase dark:text-white dark:hover:text-blue-600"
+                          "font-medium tracking-wider block transition-colors hover:text-red-600 uppercase dark:text-white dark:hover:text-blue-600"
                         }
                       >
                         Resume
@@ -139,7 +142,7 @@ const Navigation = () => {
               </div>
             </div>
           ) : undefined}
-          <div className="flex container flex-row px-4 mx-auto   justify-end">
+          <div className="flex container flex-row px-4 mx-auto  justify-end">
             <ThemeSwitch />
           </div>
         </div>
