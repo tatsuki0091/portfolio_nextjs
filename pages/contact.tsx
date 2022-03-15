@@ -1,26 +1,41 @@
 import React, { useState } from "react";
-import axios from "axios";
-import { CpIptxt } from "../styles/contactStyle";
+import { CpIptxt, ERROR_MESSAGE } from "../styles/contactStyle";
 import { SEND_EMAIL } from "../types/Types";
+import { validateInfo } from "../components/contacts/validation";
 
 const Contact = () => {
   const [subject, setSubject] = useState("");
   const [emailAddress, setEmailAddress] = useState("");
   const [message, setMessage] = useState("");
+  const [errors, setErrors] = useState<SEND_EMAIL>({
+    subject: "",
+    emailAddress: "",
+    message: "",
+  });
   const sendEmail = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const emailEndpoint = process.env.NEXT_PUBLIC_SEND_EMAIL || "";
-    const mailInfo: SEND_EMAIL = {
-      subject,
-      emailAddress,
-      message,
-    };
-    const res = await axios.post(emailEndpoint, mailInfo, {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    return res.data;
+    const validation = validateInfo(subject, emailAddress, message);
+    if (
+      validation.subject === "" &&
+      validation.emailAddress === "" &&
+      validation.message === ""
+    ) {
+      // const emailEndpoint = process.env.NEXT_PUBLIC_SEND_EMAIL || "";
+      // const mailInfo: SEND_EMAIL = {
+      //   subject,
+      //   emailAddress,
+      //   message,
+      // };
+      // const res = await axios.post(emailEndpoint, mailInfo, {
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      // });
+      // return res.data;
+    } else {
+      console.log(validation);
+      setErrors(validation);
+    }
   };
 
   return (
@@ -38,6 +53,9 @@ const Contact = () => {
                     onChange={(event) => setSubject(event.target.value)}
                   />
                 </div>
+                {errors.subject && (
+                  <ERROR_MESSAGE>{errors.subject}</ERROR_MESSAGE>
+                )}
               </CpIptxt>
               <CpIptxt>
                 <input
@@ -46,6 +64,9 @@ const Contact = () => {
                   value={emailAddress}
                   onChange={(event) => setEmailAddress(event.target.value)}
                 />
+                {errors.emailAddress && (
+                  <ERROR_MESSAGE>{errors.emailAddress}</ERROR_MESSAGE>
+                )}
               </CpIptxt>
               <CpIptxt>
                 <textarea
@@ -53,7 +74,11 @@ const Contact = () => {
                   value={message}
                   onChange={(event) => setMessage(event.target.value)}
                 />
+                {errors.message && (
+                  <ERROR_MESSAGE>{errors.message}</ERROR_MESSAGE>
+                )}
               </CpIptxt>
+
               <CpIptxt>
                 <input
                   className="hover:bg-red-600 hover:text-white dark:hover:bg-blue-600"

@@ -27,7 +27,6 @@ const About = () => {
           <ParticlesBg color={"#dbdbdb"} num={200} type="cobweb" bg={true} />
         </>
       )}
-
       <div className="container px-4 mx-auto">
         <div className="lg:space-x-5 lg:flex lg:flex-row item-center lg:-mx-4 flex flex-col-reverse text-center lg:text-left">
           <div className="flex-shrink-0 lg:mt-12 lg:px-4 mb-10">
