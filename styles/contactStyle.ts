@@ -64,3 +64,7 @@ export const CpIptxt = styled.div`
     }
   }
 `;
+
+export const ERROR_MESSAGE = styled.p`
+  color: red;
+`;
