@@ -33,7 +33,6 @@ const Contact = () => {
       // });
       // return res.data;
     } else {
-      console.log(validation);
       setErrors(validation);
     }
   };

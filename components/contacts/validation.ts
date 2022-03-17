@@ -21,7 +21,6 @@ export function validateInfo(
     errors.subject = "";
   }
 
-  console.log(emailPattern.test(emailAddress));
   if (!emailAddress) {
     errors.emailAddress = "Email address is required";
   } else if (!emailPattern.test(emailAddress)) {
