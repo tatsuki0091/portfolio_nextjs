@@ -20,18 +20,18 @@ const Contact = () => {
       validation.emailAddress === "" &&
       validation.message === ""
     ) {
-      // const emailEndpoint = process.env.NEXT_PUBLIC_SEND_EMAIL || "";
-      // const mailInfo: SEND_EMAIL = {
-      //   subject,
-      //   emailAddress,
-      //   message,
-      // };
-      // const res = await axios.post(emailEndpoint, mailInfo, {
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      // });
-      // return res.data;
+      const emailEndpoint = process.env.NEXT_PUBLIC_SEND_EMAIL || "";
+      const mailInfo: SEND_EMAIL = {
+        subject,
+        emailAddress,
+        message,
+      };
+      const res = await axios.post(emailEndpoint, mailInfo, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      return res.data;
     } else {
       console.log(validation);
       setErrors(validation);
