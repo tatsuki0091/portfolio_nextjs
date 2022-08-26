@@ -34,13 +34,81 @@ const career = () => {
                       id="association"
                       className="flex items-center mb-1 text-lg font-semibold  dark:text-white"
                     >
-                      App Growth Network -Fullstack Developer(Contract)
+                      Bittreo
                       <span className="bg-red-600 text-white text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-600 dark:text-white ml-3">
                         Latest
                       </span>
                     </h3>
                     <time className="block mb-2 text-sm font-normal leading-none  dark:text-white">
-                      January 5th, 2022 - present
+                      May 2nd, 2022 - present
+                    </time>
+                    <p className="mb-4 text-base font-normal  dark:text-white">
+                      -Develop Dashboard application for Sellers and Tellers of
+                      cryptocurrencies.
+                    </p>
+                    <p className="mb-4 text-base font-normal  dark:text-white">
+                      -Node.js, Express.js configuration and custom extensions
+                      for MVC server-side logic
+                    </p>
+                    <p className="mb-4 text-base font-normal  dark:text-white">
+                      -Vue.js, Vuex implementation for front-end
+                    </p>
+                    <p className="mb-4 text-base font-normal text-blue-600 dark:text-blue-600">
+                      <Link href="https://appgrowthnetwork.com">
+                        <a target="_blank">https://bittreo.com/</a>
+                      </Link>
+                    </p>
+                    <h3 className=" dark:text-white">Technologies</h3>
+                    <p className="inline-flex items-center py-2 px-4 text-sm font-medium text-white bg-red-600 rounded-lg border border-gray-200  focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-blue-600 dark:text-white dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+                      JavaScript
+                    </p>
+                    <p className="inline-flex items-center py-2 px-4 text-sm font-medium text-white bg-red-600 rounded-lg border border-gray-200  focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-blue-600 dark:text-white dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+                      Vue.js
+                    </p>
+                    <p className="inline-flex items-center py-2 px-4 text-sm font-medium text-white bg-red-600 rounded-lg border border-gray-200  focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-blue-600 dark:text-white dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+                      Vuex
+                    </p>
+                    <p className="inline-flex items-center py-2 px-4 text-sm font-medium text-white bg-red-600 rounded-lg border border-gray-200  focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-blue-600 dark:text-white dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+                      AWS
+                    </p>
+                    <p className="inline-flex items-center py-2 px-4 text-sm font-medium text-white bg-red-600 rounded-lg border border-gray-200  focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-blue-600 dark:text-white dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+                      Node.js
+                    </p>
+                    <p className="inline-flex items-center py-2 px-4 text-sm font-medium text-white bg-red-600 rounded-lg border border-gray-200  focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-blue-600 dark:text-white dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+                      Express.js
+                    </p>
+                    <p className="inline-flex items-center py-2 px-4 text-sm font-medium text-white bg-red-600 rounded-lg border border-gray-200  focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-blue-600 dark:text-white dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+                      MongoDB
+                    </p>
+                    <p className="inline-flex items-center py-2 px-4 text-sm font-medium text-white bg-red-600 rounded-lg border border-gray-200  focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-blue-600 dark:text-white dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+                      etc
+                    </p>
+                  </li>
+                </ScrollRevealContainer>
+                <ScrollRevealContainer move="right">
+                  <li className="mb-10 ml-6">
+                    <span className="flex absolute -left-3 justify-center items-center w-6 h-6 bg-red-600 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                      <svg
+                        className="w-3 h-3 text-white dark:text-white"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                          clipRule="evenodd"
+                        ></path>
+                      </svg>
+                    </span>
+                    <h3
+                      id="association"
+                      className="flex items-center mb-1 text-lg font-semibold  dark:text-white"
+                    >
+                      App Growth Network -Fullstack Developer(Contract)
+                    </h3>
+                    <time className="block mb-2 text-sm font-normal leading-none  dark:text-white">
+                      January 5th, 2022 - April 30th, 2022
                     </time>
                     <p className="mb-4 text-base font-normal  dark:text-white">
                       -Develop Dashboard application for marketers of mobile
