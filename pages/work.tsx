@@ -39,12 +39,6 @@ const work = () => {
                   Node.js, Express.js.
                 </p>
                 <p className="mb-3 text-lg font-normal  dark:text-white">
-                  I&apos;m managing banch of AWS service for backend. AWS
-                  Amplify, S3, VPC, EC2, IAM, AWS AppSync, Lambda, Amazon
-                  DynamoDB, GraphQL, etc, and backend programming languages are
-                  Python and Javascript.I&apos;m creating every stuff.
-                </p>
-                <p className="mb-3 text-lg font-normal  dark:text-white">
                   I&apos;m managing banch of AWS service for backend. AWS S3,
                   VPC, EC2, IAM, AWS AppSync, etc.
                 </p>
