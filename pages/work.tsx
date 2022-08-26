@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import appGrowthNetwork from "../public/img/appGrowthNetwork.jpg";
+import bittreo from "../public/img/Bittreo.jpeg";
 import matching from "../public/img/matching.jpg";
 import media from "../public/img/media.jpg";
 import medicalCheck from "../public/img/medicalCheck.jpg";
@@ -10,6 +11,67 @@ const work = () => {
   return (
     <main className="max-w-4xl mx-auto mt-10 antialiased">
       <div className="container w-full first-letter:px-4 mx-auto">
+        <ScrollRevealContainer move="bottom">
+          <div className=" lg:flex lg:flex-row item-center  mt-10 flex flex-col-reverse ">
+            <div className="w-1/2 mx-auto max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+              <a href="#">
+                <Image
+                  className="rounded-t-lg"
+                  width={383}
+                  height={280}
+                  src={bittreo}
+                  alt="Bittreo"
+                />
+              </a>
+              <div className="p-5">
+                <a href="#">
+                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    Bittreo
+                  </h5>
+                </a>
+                <p className="mb-3 text-lg font-normal  dark:text-text-white">
+                  I&apos;m currently creating Dashboard application for Sellers
+                  and Tellers of cryptocurrencies.
+                </p>
+                <p className="mb-3 text-lg font-normal  dark:text-white">
+                  I developed the frontend and backend. I implemented the
+                  frontend with Vue.js, Vuex for frontend and the backend with
+                  Node.js, Express.js.
+                </p>
+                <p className="mb-3 text-lg font-normal  dark:text-white">
+                  I&apos;m managing banch of AWS service for backend. AWS
+                  Amplify, S3, VPC, EC2, IAM, AWS AppSync, Lambda, Amazon
+                  DynamoDB, GraphQL, etc, and backend programming languages are
+                  Python and Javascript.I&apos;m creating every stuff.
+                </p>
+                <p className="mb-3 text-lg font-normal  dark:text-white">
+                  I&apos;m managing banch of AWS service for backend. AWS S3,
+                  VPC, EC2, IAM, AWS AppSync, etc.
+                </p>
+                {/* <a
+                href="#"
+                className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              >
+                Read more
+                <svg
+                  className="ml-2 -mr-1 w-4 h-4"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  ></path>
+                </svg>
+              </a> */}
+              </div>
+            </div>
+          </div>
+        </ScrollRevealContainer>
+      </div>
+      <div className="container mt-10 w-full first-letter:px-4 mx-auto">
         <ScrollRevealContainer move="bottom">
           <div className=" lg:flex lg:flex-row item-center  flex flex-col-reverse ">
             <div className="w-1/2 mx-auto max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
