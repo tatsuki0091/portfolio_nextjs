@@ -47,7 +47,7 @@ const career = () => {
                       cryptocurrencies application.
                     </p>
                     <p className="mb-4 text-base font-normal  dark:text-white">
-                      - Siver-side configured with Node.js and Express.js along with custom extensions
+                      - Back-end configured with Node.js and Express.js along with custom extensions
                       for MVC pattern
                     </p>
                     <p className="mb-4 text-base font-normal  dark:text-white">
