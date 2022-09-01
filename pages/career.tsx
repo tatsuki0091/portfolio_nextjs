@@ -43,15 +43,15 @@ const career = () => {
                       May 2nd, 2022 - present
                     </time>
                     <p className="mb-4 text-base font-normal  dark:text-white">
-                      -Develop Dashboard application for Sellers and Tellers of
-                      cryptocurrencies.
+                      - Develop data visualization and Dashboard for 
+                      cryptocurrencies application.
                     </p>
                     <p className="mb-4 text-base font-normal  dark:text-white">
-                      -Node.js, Express.js configuration and custom extensions
-                      for MVC server-side logic
+                      - Siver-side configured with Node.js and Express.js along with custom extensions
+                      for MVC pattern
                     </p>
                     <p className="mb-4 text-base font-normal  dark:text-white">
-                      -Vue.js, Vuex implementation for front-end
+                      - Front-end configured with Vue.js, with Vuex for state management pattern + library
                     </p>
                     <p className="mb-4 text-base font-normal text-blue-600 dark:text-blue-600">
                       <Link href="https://appgrowthnetwork.com">
