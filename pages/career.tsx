@@ -20,9 +20,7 @@ interface Career {
   technologies: string[];
 }
 
-const career = (props: Education[] & Career[]) => {
-  const eduInfo = props.eduInfo;
-  const careerInfo = props.careerInfo;
+const career = (props: any) => {
   return (
     <>
       <main className="max-w-4xl mx-auto mt-10 antialiased">
@@ -33,8 +31,8 @@ const career = (props: Education[] & Career[]) => {
           <div className="lg:space-x-5 lg:flex lg:flex-row item-center  flex flex-col-reverse">
             <div>
               <ol className="relative border-l border-gray-200 dark:border-gray-700">
-                {careerInfo &&
-                  careerInfo.map((info) => (
+                {props.careerInfo &&
+                  props.careerInfo.map((info: Career) => (
                     <div key={info.company}>
                       <ScrollRevealContainer move="right">
                         <li className="mb-10 ml-6">
@@ -104,8 +102,8 @@ const career = (props: Education[] & Career[]) => {
           <div className="lg:space-x-5 lg:flex lg:flex-row item-center  flex flex-col-reverse">
             <div>
               <ol className="relative border-l border-gray-200 dark:border-gray-700">
-                {eduInfo &&
-                  eduInfo.map((info) => (
+                {props.eduInfo &&
+                  props.eduInfo.map((info: Education) => (
                     <div key={info.school}>
                       <ScrollRevealContainer move="right">
                         <li className="mb-10 ml-6">
