@@ -5,24 +5,24 @@ import { EduInfo } from "../components/careers/eduInfo";
 import { CareerInfo } from "../components/careers/careerInfo";
 import ScrollRevealContainer from "../components/careers/ScrollRevealContainer";
 
-interface Education {
-  school: string;
-  term: string;
-  link: string;
-  Majored: string;
-}
+// interface Education {
+//   school: string;
+//   term: string;
+//   link: string;
+//   Majored: string;
+// }
 
-interface Career {
-  company: string;
-  term: string;
-  link: string;
-  description: string[];
-  technologies: string[];
-}
+// interface Career {
+//   company: string;
+//   term: string;
+//   link: string;
+//   description: string[];
+//   technologies: string[];
+// }
 
-const career = (props: Education[] & Career[]) => {
-  const eduInfo = props.eduInfo;
-  const careerInfo = props.careerInfo;
+const career = () => {
+  const eduInfo = EduInfo;
+  const careerInfo = CareerInfo;
   return (
     <>
       <main className="max-w-4xl mx-auto mt-10 antialiased">
