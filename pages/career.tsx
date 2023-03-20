@@ -5,22 +5,24 @@ import { EduInfo } from "../components/careers/eduInfo";
 import { CareerInfo } from "../components/careers/careerInfo";
 import ScrollRevealContainer from "../components/careers/ScrollRevealContainer";
 
-interface Education {
-  school: string;
-  term: string;
-  link: string;
-  Majored: string;
-}
+// interface Education {
+//   school: string;
+//   term: string;
+//   link: string;
+//   Majored: string;
+// }
 
-interface Career {
-  company: string;
-  term: string;
-  link: string;
-  description: string[];
-  technologies: string[];
-}
+// interface Career {
+//   company: string;
+//   term: string;
+//   link: string;
+//   description: string[];
+//   technologies: string[];
+// }
 
-const career = (props: any) => {
+const career = () => {
+  const eduInfo = EduInfo;
+  const careerInfo = CareerInfo;
   return (
     <>
       <main className="max-w-4xl mx-auto mt-10 antialiased">
@@ -31,8 +33,8 @@ const career = (props: any) => {
           <div className="lg:space-x-5 lg:flex lg:flex-row item-center  flex flex-col-reverse">
             <div>
               <ol className="relative border-l border-gray-200 dark:border-gray-700">
-                {props.careerInfo &&
-                  props.careerInfo.map((info: Career) => (
+                {careerInfo &&
+                  careerInfo.map((info) => (
                     <div key={info.company}>
                       <ScrollRevealContainer move="right">
                         <li className="mb-10 ml-6">
@@ -102,8 +104,8 @@ const career = (props: any) => {
           <div className="lg:space-x-5 lg:flex lg:flex-row item-center  flex flex-col-reverse">
             <div>
               <ol className="relative border-l border-gray-200 dark:border-gray-700">
-                {props.eduInfo &&
-                  props.eduInfo.map((info: Education) => (
+                {eduInfo &&
+                  eduInfo.map((info) => (
                     <div key={info.school}>
                       <ScrollRevealContainer move="right">
                         <li className="mb-10 ml-6">
