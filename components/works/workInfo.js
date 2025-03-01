@@ -6,7 +6,7 @@ import medicalCheck from "../../public/img/medicalCheck.jpg";
 
 export const WorkInfo = [
   {
-    image: bittreo,
+    image: '/img/Bittreo.jpeg',
     company: "Bittreo",
     description: [
       "I&apos;m currently creating Dashboard application for Sellers and Tellers of cryptocurrencies.",
@@ -15,7 +15,7 @@ export const WorkInfo = [
     ],
   },
   {
-    image: appGrowthNetwork,
+    image: '/img/appGrowthNetwork.jpg',
     company: "App Growth Network",
     description: [
       "App Growth Network is the App Store Optimization company for mobile application.",
@@ -26,7 +26,7 @@ export const WorkInfo = [
     ],
   },
   {
-    image: matching,
+    image: '/img/onet.jpg',
     company: "Matching Service",
     description: [
       "This matching service is one of the most famous matching service in Japan.",

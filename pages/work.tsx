@@ -1,12 +1,12 @@
-import React from "react";
-import Image from "next/image";
-import appGrowthNetwork from "../public/img/appGrowthNetwork.jpg";
-import bittreo from "../public/img/Bittreo.jpeg";
-import matching from "../public/img/matching.jpg";
-import media from "../public/img/media.jpg";
-import medicalCheck from "../public/img/medicalCheck.jpg";
-import ScrollRevealContainer from "../components/careers/ScrollRevealContainer";
-import { WorkInfo } from "../components/works/workInfo";
+import React from 'react';
+import Image from 'next/image';
+import appGrowthNetwork from '../public/img/appGrowthNetwork.jpg';
+import bittreo from '../public/img/Bittreo.jpeg';
+import matching from '../public/img/matching.jpg';
+import media from '../public/img/media.jpg';
+import medicalCheck from '../public/img/medicalCheck.jpg';
+import ScrollRevealContainer from '../components/careers/ScrollRevealContainer';
+import { WorkInfo } from '../components/works/workInfo';
 
 interface Work {
   image: string;
@@ -15,6 +15,7 @@ interface Work {
 }
 
 const work = (props: any) => {
+  console.log(props);
   return (
     <>
       <main className="max-w-4xl mx-auto mt-10 antialiased">
