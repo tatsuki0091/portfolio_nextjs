@@ -17,6 +17,8 @@ export const CareerInfo = [
       "Express.js",
       "MongoDB",
       "etc",
+      "TypeScript",
+      "Next.js"
     ],
   },
   {
