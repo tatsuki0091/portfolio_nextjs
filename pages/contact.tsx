@@ -1,40 +1,49 @@
-import React, { useState } from "react";
-import { CpIptxt, ERROR_MESSAGE } from "../styles/contactStyle";
-import { SEND_EMAIL } from "../types/Types";
-import { validateInfo } from "../components/contacts/validation";
+import React, { useState } from 'react';
+import { CpIptxt, ERROR_MESSAGE } from '../styles/contactStyle';
+import { SEND_EMAIL } from '../types/Types';
+import { validateInfo } from '../components/contacts/validation';
+import axios from 'axios';
 
 const Contact = () => {
-  const [subject, setSubject] = useState("");
-  const [emailAddress, setEmailAddress] = useState("");
-  const [message, setMessage] = useState("");
+  const [subject, setSubject] = useState('');
+  const [emailAddress, setEmailAddress] = useState('');
+  const [message, setMessage] = useState('');
   const [errors, setErrors] = useState<SEND_EMAIL>({
-    subject: "",
-    emailAddress: "",
-    message: "",
+    subject: '',
+    emailAddress: '',
+    message: '',
   });
   const sendEmail = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const validation = validateInfo(subject, emailAddress, message);
-    if (
-      validation.subject === "" &&
-      validation.emailAddress === "" &&
-      validation.message === ""
-    ) {
-      // const emailEndpoint = process.env.NEXT_PUBLIC_SEND_EMAIL || "";
-      // const mailInfo: SEND_EMAIL = {
-      //   subject,
-      //   emailAddress,
-      //   message,
-      // };
-      // const res = await axios.post(emailEndpoint, mailInfo, {
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      // });
-      // return res.data;
-    } else {
-      setErrors(validation);
-    }
+    const response = await axios.post('/api/email', {
+      from: 'yao099991@gmail.com',
+      subject: subject,
+      text: message,
+    });
+    console.log(response);
+    // const validation = validateInfo(subject, emailAddress, message);
+    // if (
+    //   validation.subject === '' &&
+    //   validation.emailAddress === '' &&
+    //   validation.message === ''
+    // ) {
+    //   const response = await axios.get('/api/user');
+    //   console.log(response)
+    //   // const emailEndpoint = process.env.NEXT_PUBLIC_SEND_EMAIL || "";
+    //   // const mailInfo: SEND_EMAIL = {
+    //   //   subject,
+    //   //   emailAddress,
+    //   //   message,
+    //   // };
+    //   // const res = await axios.post(emailEndpoint, mailInfo, {
+    //   //   headers: {
+    //   //     "Content-Type": "application/json",
+    //   //   },
+    //   // });
+    //   // return res.data;
+    // } else {
+    //   setErrors(validation);
+    // }
   };
 
   return (
