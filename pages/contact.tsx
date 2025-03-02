@@ -2,13 +2,15 @@ import React, { useState } from 'react';
 import { CpIptxt, ERROR_MESSAGE } from '../styles/contactStyle';
 import { validateInfo } from '../components/contacts/validation';
 import axios from 'axios';
-import { ZodIssue } from 'zod';
+import Check from '../components/commons/modals/Check';
+import Modal from '../components/commons/modals/Modal';
 
 const Contact = () => {
   const [subject, setSubject] = useState('');
   const [emailAddress, setEmailAddress] = useState('');
   const [message, setMessage] = useState('');
   const [errors, setErrors] = useState<string[]>([]);
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const sendEmail = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (errors.length > 1) {
@@ -23,6 +25,7 @@ const Contact = () => {
           text: message,
         });
         setErrors([]);
+        setIsModalOpen(true);
       } else {
         for (const issue of validation.error.issues) {
           setErrors((prev) => [...prev, issue.message]);
@@ -75,7 +78,6 @@ const Contact = () => {
             </form>
           </div>
         </div>
-        ;
         {errors.length > 0 &&
           errors.map((error) => (
             <>
@@ -87,6 +89,12 @@ const Contact = () => {
               </div>
             </>
           ))}
+        <Modal isOpen={isModalOpen} setIsModalOpen={setIsModalOpen} path={'/'}>
+          <h1 className="text-center text-xl font-bold">
+            Your Email Was Sent.
+          </h1>
+          <Check />
+        </Modal>
       </main>
     </>
   );

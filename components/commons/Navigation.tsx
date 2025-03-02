@@ -1,13 +1,13 @@
-import React, { useState, useContext } from "react";
-import NavLinks from "./NavLinks";
-import ThemeSwitch from "../utils/ThemeSwitch";
-import Link from "next/link";
+import React, { useState, useContext } from 'react';
+// import NavLinks from "./NavLinks";
+import ThemeSwitch from '../utils/ThemeSwitch';
+import Link from 'next/link';
 import {
   HumbergerButton,
   BlackLine,
   WhiteLine,
-} from "../../styles/navigationStyle";
-import { DataContext } from "../contexts/DataContext";
+} from '../../styles/navigationStyle';
+import { DataContext } from '../contexts/DataContext';
 
 const Navigation = () => {
   const mountedContext = useContext(DataContext);
@@ -24,7 +24,7 @@ const Navigation = () => {
               <Link href="/">
                 <a
                   className={
-                    "font-medium tracking-wider transition-colors hover:text-red-600 uppercase dark:text-white dark:hover:text-blue-600"
+                    'font-medium tracking-wider transition-colors hover:text-red-600 uppercase dark:text-white dark:hover:text-blue-600'
                   }
                 >
                   Top
@@ -35,7 +35,7 @@ const Navigation = () => {
               <Link href="/career">
                 <a
                   className={
-                    "font-medium tracking-wider transition-colors hover:text-red-600 uppercase dark:text-white dark:hover:text-blue-600"
+                    'font-medium tracking-wider transition-colors hover:text-red-600 uppercase dark:text-white dark:hover:text-blue-600'
                   }
                 >
                   Career
@@ -46,7 +46,7 @@ const Navigation = () => {
               <Link href="/work">
                 <a
                   className={
-                    "font-medium tracking-wider transition-colors hover:text-red-600 uppercase dark:text-white dark:hover:text-blue-600"
+                    'font-medium tracking-wider transition-colors hover:text-red-600 uppercase dark:text-white dark:hover:text-blue-600'
                   }
                 >
                   Work
@@ -57,7 +57,7 @@ const Navigation = () => {
               <Link href="/contact">
                 <a
                   className={
-                    "font-medium tracking-wider transition-colors  hover:text-red-600 uppercase dark:text-white dark:hover:text-blue-600"
+                    'font-medium tracking-wider transition-colors  hover:text-red-600 uppercase dark:text-white dark:hover:text-blue-600'
                   }
                 >
                   Contact
@@ -65,11 +65,11 @@ const Navigation = () => {
               </Link>
             </li>
             <li className="mr-6">
-              <Link href={"/pdf/resume.pdf"}>
+              <Link href={'/pdf/resume.pdf'}>
                 <a
                   target="_blank"
                   className={
-                    "font-medium tracking-wider transition-colors hover:text-red-600 uppercase dark:text-white dark:hover:text-blue-600"
+                    'font-medium tracking-wider transition-colors hover:text-red-600 uppercase dark:text-white dark:hover:text-blue-600'
                   }
                 >
                   Resume
@@ -116,7 +116,7 @@ const Navigation = () => {
                     <Link href="/">
                       <a
                         className={
-                          "font-medium tracking-wider block transition-colors  hover:text-red-600 uppercase dark:text-white dark:hover:text-blue-600"
+                          'font-medium tracking-wider block transition-colors  hover:text-red-600 uppercase dark:text-white dark:hover:text-blue-600'
                         }
                       >
                         TOP
@@ -127,7 +127,7 @@ const Navigation = () => {
                     <Link href="/career">
                       <a
                         className={
-                          "font-medium tracking-wider block transition-colors hover:text-red-600 uppercase  dark:hover:text-blue-600"
+                          'font-medium tracking-wider block transition-colors hover:text-red-600 uppercase  dark:hover:text-blue-600'
                         }
                       >
                         My Career
@@ -138,7 +138,7 @@ const Navigation = () => {
                     <Link href="/work">
                       <a
                         className={
-                          "font-medium tracking-wider block transition-colors hover:text-red-600 uppercase dark:text-white dark:hover:text-blue-600"
+                          'font-medium tracking-wider block transition-colors hover:text-red-600 uppercase dark:text-white dark:hover:text-blue-600'
                         }
                       >
                         Work
@@ -146,11 +146,11 @@ const Navigation = () => {
                     </Link>
                   </li>
                   <li className="p-2 border-b-2 dark:bg-black">
-                    <Link href={"/pdf/resume.pdf"}>
+                    <Link href={'/pdf/resume.pdf'}>
                       <a
                         target="_blank"
                         className={
-                          "font-medium tracking-wider block transition-colors hover:text-red-600 uppercase dark:text-white dark:hover:text-blue-600"
+                          'font-medium tracking-wider block transition-colors hover:text-red-600 uppercase dark:text-white dark:hover:text-blue-600'
                         }
                       >
                         Resume
