@@ -1,39 +1,38 @@
-import React, { useState } from "react";
-import { CpIptxt, ERROR_MESSAGE } from "../styles/contactStyle";
-import { SEND_EMAIL } from "../types/Types";
-import { validateInfo } from "../components/contacts/validation";
+import React, { useState } from 'react';
+import { CpIptxt, ERROR_MESSAGE } from '../styles/contactStyle';
+import { validateInfo } from '../components/contacts/validation';
+import axios from 'axios';
+import Check from '../components/commons/modals/Check';
+import Modal from '../components/commons/modals/Modal';
 
 const Contact = () => {
-  const [subject, setSubject] = useState("");
-  const [emailAddress, setEmailAddress] = useState("");
-  const [message, setMessage] = useState("");
-  const [errors, setErrors] = useState<SEND_EMAIL>({
-    subject: "",
-    emailAddress: "",
-    message: "",
-  });
+  const [subject, setSubject] = useState('');
+  const [emailAddress, setEmailAddress] = useState('');
+  const [message, setMessage] = useState('');
+  const [errors, setErrors] = useState<string[]>([]);
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const sendEmail = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    if (errors.length > 1) {
+      setErrors([]);
+    }
     const validation = validateInfo(subject, emailAddress, message);
-    if (
-      validation.subject === "" &&
-      validation.emailAddress === "" &&
-      validation.message === ""
-    ) {
-      // const emailEndpoint = process.env.NEXT_PUBLIC_SEND_EMAIL || "";
-      // const mailInfo: SEND_EMAIL = {
-      //   subject,
-      //   emailAddress,
-      //   message,
-      // };
-      // const res = await axios.post(emailEndpoint, mailInfo, {
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      // });
-      // return res.data;
-    } else {
-      setErrors(validation);
+    try {
+      if (validation.success) {
+        await axios.post('/api/email', {
+          from: emailAddress,
+          subject: subject,
+          text: message,
+        });
+        setErrors([]);
+        setIsModalOpen(true);
+      } else {
+        for (const issue of validation.error.issues) {
+          setErrors((prev) => [...prev, issue.message]);
+        }
+      }
+    } catch (err) {
+      console.log(err);
     }
   };
 
@@ -52,9 +51,6 @@ const Contact = () => {
                     onChange={(event) => setSubject(event.target.value)}
                   />
                 </div>
-                {errors.subject && (
-                  <ERROR_MESSAGE>{errors.subject}</ERROR_MESSAGE>
-                )}
               </CpIptxt>
               <CpIptxt>
                 <input
@@ -63,9 +59,6 @@ const Contact = () => {
                   value={emailAddress}
                   onChange={(event) => setEmailAddress(event.target.value)}
                 />
-                {errors.emailAddress && (
-                  <ERROR_MESSAGE>{errors.emailAddress}</ERROR_MESSAGE>
-                )}
               </CpIptxt>
               <CpIptxt>
                 <textarea
@@ -73,9 +66,6 @@ const Contact = () => {
                   value={message}
                   onChange={(event) => setMessage(event.target.value)}
                 />
-                {errors.message && (
-                  <ERROR_MESSAGE>{errors.message}</ERROR_MESSAGE>
-                )}
               </CpIptxt>
 
               <CpIptxt>
@@ -88,6 +78,23 @@ const Contact = () => {
             </form>
           </div>
         </div>
+        {errors.length > 0 &&
+          errors.map((error) => (
+            <>
+              <div
+                className="flex justify-center items-center mt-5"
+                key={error}
+              >
+                <ERROR_MESSAGE>{error}</ERROR_MESSAGE>
+              </div>
+            </>
+          ))}
+        <Modal isOpen={isModalOpen} setIsModalOpen={setIsModalOpen} path={'/'}>
+          <h1 className="text-center text-xl font-bold">
+            Your Email Was Sent.
+          </h1>
+          <Check />
+        </Modal>
       </main>
     </>
   );

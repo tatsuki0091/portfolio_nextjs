@@ -1,5 +1,4 @@
-import React from "react";
-import Link from "next/link";
+import React from 'react';
 
 const Footer = () => {
   return (
@@ -7,11 +6,11 @@ const Footer = () => {
       <div className="max-w-4xl px-4 mx-auto text-gray-800 dark:text-white">
         <div className="pb-8 mb-2 border-t-2 border-gray-300 dark:border-white-300"></div>
         <div className="flex flex-col justify-between lg:flex-row items-center">
-          <p>Copyright©2022 Tatsuki Yamatani. All rights reserved.</p>
+          <p>Copyright©2025 Tatsuki Yamatani. All rights reserved.</p>
           <div className="flex flex-wrap pt-2 sm:space-x-4 space-x-2 font-medium lg:pt-0">
             <a
               href="https://twitter.com/tat099991"
-              className={"transition-color"}
+              className={'transition-color'}
               target="_blank"
               rel="noreferrer"
             >
@@ -25,7 +24,7 @@ const Footer = () => {
             </a>
             <a
               href="https://www.linkedin.com/in/tatsuki-yamatani/"
-              className={"transition-colors"}
+              className={'transition-colors'}
               target="_blank"
               rel="noreferrer"
             >
@@ -41,7 +40,7 @@ const Footer = () => {
             <a
               href="https://github.com/tatsuki0091"
               className={
-                "transition-colors  fill-gray-600 hover:fill-red-600 dark:fill-white dark:hover:fill-blue-600"
+                'transition-colors  fill-gray-600 hover:fill-red-600 dark:fill-white dark:hover:fill-blue-600'
               }
               target="_blank"
               rel="noreferrer"
