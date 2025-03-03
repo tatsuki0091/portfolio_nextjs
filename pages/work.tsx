@@ -1,8 +1,8 @@
-import React from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import ScrollRevealContainer from '../components/careers/ScrollRevealContainer';
 import { WorkInfo } from '../components/works/workInfo';
-
+import Modal from '../components/commons/modals/Modal';
 interface Work {
   workInfo: {
     image: string;
@@ -12,6 +12,7 @@ interface Work {
 }
 
 const work = (props: Work) => {
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   return (
     <>
       <main className="max-w-4xl mx-auto mt-10 antialiased">
@@ -25,7 +26,11 @@ const work = (props: Work) => {
                 >
                   <ScrollRevealContainer move="bottom">
                     <article className="overflow-hidden rounded-lg shadow-lg">
-                      <a href="#">
+                      <button
+                        onClick={() => {
+                          setIsModalOpen(true);
+                        }}
+                      >
                         <Image
                           alt="Placeholder"
                           className="block h-auto w-full"
@@ -33,18 +38,19 @@ const work = (props: Work) => {
                           width={383}
                           height={280}
                         />
-                      </a>
+                      </button>
                       <header className="flex items-center justify-between leading-tight p-2 md:p-4">
                         <h1 className="text-lg">
-                          <a
-                            className="no-underline hover:underline text-black"
-                            href="#"
+                          <button
+                            onClick={() => {
+                              setIsModalOpen(true);
+                            }}
                           >
                             {info.company}
-                          </a>
+                          </button>
                         </h1>
                       </header>
-                      <footer className=" p-2 md:p-4">
+                      {/* <footer className=" p-2 md:p-4">
                         <div className="overflow-y-auto h-32">
                           {info.description.map(
                             (description: string, index: number) => (
@@ -52,9 +58,16 @@ const work = (props: Work) => {
                             )
                           )}
                         </div>
-                      </footer>
+                      </footer> */}
                     </article>
                   </ScrollRevealContainer>
+                  <Modal isOpen={isModalOpen} setIsModalOpen={setIsModalOpen}>
+                    {info.description.map(
+                      (description: string, index: number) => (
+                        <p key={index}>{description}</p>
+                      )
+                    )}
+                  </Modal>
                 </div>
               ))}
           </div>
