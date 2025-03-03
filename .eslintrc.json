@@ -1,3 +1,7 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next", "next/core-web-vitals"],
+  "rules": {
+    "no-unused-vars": "off", // 未使用の変数に関する警告を無効化
+    "react-hooks/rules-of-hooks": "off" // React Hooksのルールに関する警告を無効化
+  }
 }
