@@ -47,11 +47,14 @@ const About = () => {
             <div className="mt-6 text-lg dark:text-white">
               <p> Hello! </p>
               <p className="mb-4">
-                I'm Tatsuki, thank you for visiting my page. I am an experienced
-                Fullstack Developer out of Vancouver, BC of over four years,
-                specializing in both front-end and back-end web development.
+                I&apos;m Tatsuki, thank you for visiting my page. I am an
+                experienced Fullstack Developer out of Vancouver, BC of over
+                four years, specializing in both front-end and back-end web
+                development.
               </p>
-              <p>I'm fully equipped to assist in all sides of your project.</p>
+              <p>
+                I&apos;m fully equipped to assist in all sides of your project.
+              </p>
               <p>
                 Please check out my page to see more details about my experience
                 and to learn a little bit more about me.
