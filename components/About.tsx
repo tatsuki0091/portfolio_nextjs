@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
-import profile from "../public/img/profile.jpg";
+import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
+import profile from '../public/img/profile.jpg';
 // import { Button } from "../styles/aboutStyle";
 // import Link from "next/link";
-import dynamic from "next/dynamic";
-import { useContext } from "react";
-import { DataContext } from "./contexts/DataContext";
+import dynamic from 'next/dynamic';
+import { useContext } from 'react';
+import { DataContext } from './contexts/DataContext';
 
 const About = () => {
   const mountedContext = useContext(DataContext);
   const ParticlesBg = dynamic(
     () => {
-      return import("particles-bg");
+      return import('particles-bg');
     },
     { ssr: false }
   );
@@ -20,11 +20,11 @@ const About = () => {
     <>
       {mountedContext.mounted == true ? (
         <>
-          <ParticlesBg color={"#4f4f4f"} num={200} type="cobweb" bg={true} />
+          <ParticlesBg color={'#4f4f4f'} num={200} type="cobweb" bg={true} />
         </>
       ) : (
         <>
-          <ParticlesBg color={"#dbdbdb"} num={200} type="cobweb" bg={true} />
+          <ParticlesBg color={'#dbdbdb'} num={200} type="cobweb" bg={true} />
         </>
       )}
       <div className="container px-4 mx-auto">
@@ -45,21 +45,18 @@ const About = () => {
               Hello
             </h1>
             <div className="mt-6 text-lg dark:text-white">
+              <p> Hello! </p>
               <p className="mb-4">
-                I&apos;m Tatsuki who has 4 years experience as a Fullstack
-                Developer specialized in both front-end and back-end web
-                development.
+                I'm Tatsuki, thank you for visiting my page. I am an experienced
+                Fullstack Developer out of Vancouver, BC of over four years,
+                specializing in both front-end and back-end web development.
               </p>
-              <p>I can help you with all the sides of your project.</p>
+              <p>I'm fully equipped to assist in all sides of your project.</p>
               <p>
-                I&apos;m currently living in Vancouver, and looking for a job.
+                Please check out my page to see more details about my experience
+                and to learn a little bit more about me.
               </p>
-              <p>
-                Please push My Career link and Work link of the navigation bar
-                to check who I am.
-              </p>
-              <p> I look forward to connecting with you.</p>
-              <p> Cheers</p>
+              <p>Cheers</p>
             </div>
           </div>
         </div>
